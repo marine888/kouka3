@@ -13,7 +13,7 @@ class MemosTableSeeder extends Seeder
     public function run()
     {
         $param = [
-            'member_id' => '1',
+            'user_id' => '1',
             'name' => 'ziro',
             'date' => '8/8',
             'memo' => '電話をかける',
@@ -21,7 +21,7 @@ class MemosTableSeeder extends Seeder
         DB::table('memos')->insert($param);
      
         $param = [
-            'member_id' => '1',
+            'user_id' => '1',
             'name' => 'momo',
             'date' => '9/20',
             'memo' => 'LINEする',
@@ -29,7 +29,7 @@ class MemosTableSeeder extends Seeder
         DB::table('memos')->insert($param);
      
         $param = [
-            'member_id' => '2',
+            'user_id' => '2',
             'name' => 'tubasa',
             'date' => '3/6',
             'memo' => '歌う',

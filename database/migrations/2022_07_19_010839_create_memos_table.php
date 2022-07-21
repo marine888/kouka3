@@ -14,13 +14,14 @@ class CreateMemosTable extends Migration
     public function up()
     {
         Schema::create('memos', function (Blueprint $table) {
-            $table->increments('id');
-           $table->string('member_id');
+           $table->increments('id');
+           $table->unsignedBigInteger('user_id');
            $table->string('name');
            $table->string('date');
            $table->string('memo');
            $table->timestamps();
-           
+
+           $table->foreign('user_id')->references('id')->on('users');
 
         });
     }

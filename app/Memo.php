@@ -10,7 +10,7 @@ class Memo extends Model
 
    public static $rules = array(
       'name' => 'required',
-      'date' => 'required',
+      'email' => 'required',
       'memo' => 'required'
    );
 
