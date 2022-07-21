@@ -11,6 +11,8 @@ class CreateMemosTable extends Migration
      *
      * @return void
      */
+
+    //  メモテーブル作る
     public function up()
     {
         Schema::create('memos', function (Blueprint $table) {

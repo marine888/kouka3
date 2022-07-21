@@ -8,9 +8,10 @@ class Memo extends Model
 {
     protected $guarded = array('id');
 
+   //  ルール
    public static $rules = array(
       'name' => 'required',
-      'email' => 'required',
+      'date' => 'required',
       'memo' => 'required'
    );
 

@@ -1,9 +1,10 @@
+{{--  メインページ  --}}
 @extends('layouts.memo')
 
 @section('title', 'kouka3')
 
 @section('menu_title')
-ユーザ情報一覧画面
+メモ
 @endsection
 
 @section('content')
@@ -12,16 +13,17 @@
     <input type="text" name="input" value="{{$input}}">
     <input type="submit" value="検索">
     </form>
-   <a href="/kouka3/add">新規登録</a>
+   <a href="/kouka3/add">Register Now</a>
    <table>
-   <tr><th>Name</th><th>Mail</th><th>Select</th><th>Update</th><th>Delete</th></tr>
-   @foreach ($items as $item)
-       <tr>
-           <td>{{$item->name}}</td>
-           <td>{{$item->email}}</td>
-           <td><a href="/kouka3/show?id={{$item->id}}">詳細</a></td>
-           <td><a href="/kouka3/edit?id={{$item->id}}">更新</a></td>
-           <td><a href="/kouka3/del?id={{$item->id}}">削除</a></td>
+    <tr><th>Name</th><th>Date</th><th>Memo</th><th>Detail</th><th>Update</th><th>Delete</th></tr>
+    @foreach ($items as $item)
+        <tr>
+         <td>{{$item->name}}</td>
+         <td>{{$item->date}}</td>
+         <td>{{$item->memo}}</td>
+           <td><a href="/kouka3/show?id={{$item->id}}">Detail</a></td>
+           <td><a href="/kouka3/edit?id={{$item->id}}">Update</a></td>
+           <td><a href="/kouka3/del?id={{$item->id}}">Delete</a></td>
        </tr>
    @endforeach
    </table>

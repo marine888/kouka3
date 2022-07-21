@@ -10,6 +10,8 @@ class MemosTableSeeder extends Seeder
      *
      * @return void
      */
+
+    //  seederでデータを入れる
     public function run()
     {
         $param = [
