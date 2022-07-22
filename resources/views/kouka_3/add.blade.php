@@ -28,7 +28,7 @@
    </table>
    </form>
 
-      {{--  ホームに戻る  --}}
+ {{--  ホームに戻る  --}}
       <button type="button" onClick="history.back()">戻る</button>
 @endsection
 
